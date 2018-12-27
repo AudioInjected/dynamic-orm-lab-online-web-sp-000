@@ -10,8 +10,7 @@ class InteractiveRecord
   def self.column_names
     DB[:conn].results_as_hash = true
     sql = "pragma table_info('#{table_name}')"
-    info = DB[:conn].execute(sql)
-    info.collect {|col| col["name"]}
+    DB[:conn].execute(sql).collect {|col| col["name"]}
   end
   
   def initialize(options = {})
@@ -28,6 +27,5 @@ class InteractiveRecord
   
   def values_for_insert 
     col_names_for_insert.split(", ").collect {|col| "'#{send(col)}'"}.join(", ")
-    #binding.pry
   end 
 end
