@@ -15,6 +15,6 @@ class InteractiveRecord
   end
   
   def initialize(options = {}) 
-    
+    binding.pry
   end
 end
