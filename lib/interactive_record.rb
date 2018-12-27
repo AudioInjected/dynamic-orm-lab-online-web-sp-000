@@ -35,6 +35,6 @@ class InteractiveRecord
       VALUES (#{values_for_insert})
     SQL
     
-    INSERT INTO students ()
+    DB[:conn].execute(sql)
   end
 end
