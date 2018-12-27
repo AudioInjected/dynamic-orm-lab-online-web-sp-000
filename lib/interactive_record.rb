@@ -36,5 +36,6 @@ class InteractiveRecord
     SQL
     
     DB[:conn].execute(sql)
+    self.id = DB[:conn].execute("SELECT")
   end
 end
