@@ -37,6 +37,5 @@ class InteractiveRecord
     
     DB[:conn].execute(sql)
     self.id = DB[:conn].execute("SELECT last_insert_rowid() FROM #{table_name_for_insert}")[0][0]
-    binding.pry
   end
 end
