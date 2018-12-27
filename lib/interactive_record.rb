@@ -27,7 +27,7 @@ class InteractiveRecord
   end 
   
   def values_for_insert 
-    col_names_for_insert.split(", ").collect {|col| '#{send(col)}'}
+    col_names_for_insert.split(", ").collect {|col| send('#{col}')}
     #binding.pry
   end 
 end
