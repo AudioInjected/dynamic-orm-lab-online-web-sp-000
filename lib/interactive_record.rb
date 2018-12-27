@@ -12,7 +12,7 @@ class InteractiveRecord
 
     sql = "pragma table_info('#{table_name}')"
     
-    info = 
+    info = DB[:conn].execute(sql)
     binding.pry
   end
 end
