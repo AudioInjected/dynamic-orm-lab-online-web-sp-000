@@ -13,4 +13,8 @@ class InteractiveRecord
     info = DB[:conn].execute(sql)
     info.collect {|col| col["name"]}
   end
+  
+  def initialize(options = {}) 
+    
+  end
 end
