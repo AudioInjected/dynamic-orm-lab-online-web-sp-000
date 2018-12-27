@@ -12,7 +12,7 @@ class InteractiveRecord
 
     sql = "pragma table_info('#{table_name}')"
     
-    
+    info = 
     binding.pry
   end
 end
