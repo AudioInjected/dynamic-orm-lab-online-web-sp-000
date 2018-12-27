@@ -28,4 +28,10 @@ class InteractiveRecord
   def values_for_insert 
     col_names_for_insert.split(", ").collect {|col| "'#{send(col)}'"}.join(", ")
   end 
+  
+  def save 
+    sql = <<-SQL
+      
+    SQL
+  end
 end
