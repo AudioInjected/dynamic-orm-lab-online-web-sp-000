@@ -51,7 +51,6 @@ class InteractiveRecord
     sql = <<-SQL
       SELECT * FROM #{self.table_name} WHERE #{hash.keys.first} = ?
     SQL
-    binding.pry
     DB[:conn].execute(sql, hash.values)
   end  
 end
