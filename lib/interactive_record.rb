@@ -14,7 +14,8 @@ class InteractiveRecord
     info.collect {|col| col["name"]}
   end
   
-  def initialize(options = {}) 
+  def initialize(options = {})
+    options.each {|key, value| self.send("#{key}"=, value)
     binding.pry
   end
 end
